@@ -1,0 +1,46 @@
+*, *:before, *:after {
+  box-sizing:border-box;
+}
+
+body{
+	font-family: 'Comfortaa', cursive;
+	line-height: 1.4em;
+	font-weight: 300;
+	font-size: 1em;
+	background: #d5d5d5;
+}
+
+.container{
+	width: 31.25em;
+	margin: 3.125em auto;
+	background: #fff;
+	padding: 2em 2em 2em 3em;
+	box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+}
+
+.heading{
+	font-family: 'Poiret One', cursive;
+  color: #473C8B;
+  text-align: center;
+}
+
+h1{
+	font-size: 3em;
+	line-height: 1.25em;
+	text-decoration: underline;
+   -moz-text-decoration-color: #473C8B;
+   -webkit-text-decoration-color: #473C8B;
+   text-decoration-color: #473C8B;
+}
+
+h2{
+	font-size: 2em;
+	margin: 1.5em 0 0.25em;
+	line-height: 1em;
+}
+
+li{
+	font-size: 1em;
+  list-style-type: upper-roman;
+  color: black;
+}

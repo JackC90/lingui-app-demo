@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import List from './components/List/List';
+import catalogZhCn from './locales/zh-CN/messages.js';
+import { I18nProvider } from '@lingui/react'
+
+const catalogs = { 'en-US': catalogZhCn };
 
 function App() {
+  const content = {
+    name: 'Wilson',
+    date: Date.now(),
+    value: 5,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <I18nProvider language="zh-CN" catalogs={catalogs}>
+      <div className="App">
+        <header className="App-header">
+          <List content={content} />
+        </header>
+      </div>
+    </I18nProvider>  
   );
 }
 

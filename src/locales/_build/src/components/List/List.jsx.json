@@ -1,0 +1,50 @@
+{
+  "List of Things to Remember": {
+    "origin": [
+      [
+        "src/components/List/List.jsx",
+        10
+      ]
+    ]
+  },
+  "Today's date -": {
+    "origin": [
+      [
+        "src/components/List/List.jsx",
+        14
+      ]
+    ]
+  },
+  "Friend's name - {name}": {
+    "origin": [
+      [
+        "src/components/List/List.jsx",
+        25
+      ]
+    ]
+  },
+  "The weather is <0>hot</0>.": {
+    "origin": [
+      [
+        "src/components/List/List.jsx",
+        28
+      ]
+    ]
+  },
+  "{value, plural, =0 {No books on the table.} one {# book on the table.} other {# books on the table.}}": {
+    "origin": [
+      [
+        "src/components/List/List.jsx",
+        31
+      ]
+    ]
+  },
+  "Visit a <0>site</0>.": {
+    "origin": [
+      [
+        "src/components/List/List.jsx",
+        38
+      ]
+    ]
+  }
+}
