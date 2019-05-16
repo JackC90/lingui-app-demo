@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { I18nProvider } from '@lingui/react';
 
-export class I18nLoader extends React.Component {
+export class I18nLoader extends Component {
   state = {
     catalogs: {},
   }
@@ -10,7 +10,7 @@ export class I18nLoader extends React.Component {
   loadCatalog = async (language) => {
     const catalog = await import(
       /* webpackMode: "lazy", webpackChunkName: "i18n-[index]" */
-      `@lingui/loader!locale/${language}/messages.json`)
+      `../../locales/${language}/messages.js`)
 
     this.setState(state => ({
       catalogs: {
@@ -41,7 +41,11 @@ export class I18nLoader extends React.Component {
     const { catalogs } = this.state
 
     // Skip rendering when catalog isn't loaded.
-    if (!catalogs[language]) return
+    if (!catalogs[language]) return (
+       <div>
+         Loading...
+       </div>
+    )
 
     return (
       <I18nProvider language={language} catalogs={catalogs}>

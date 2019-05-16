@@ -1,26 +1,25 @@
 import React from 'react';
+import { createStore } from "redux"; 
+import { Provider } from 'react-redux';
 import './App.css';
-import List from './components/List/List';
-import catalogZhCn from './locales/zh-CN/messages.js';
-import { I18nProvider } from '@lingui/react'
+import Main from './containers/Main/Main';
+import I18nLoader from './containers/I18nLoader/I18nLoader';
+import reducer from './reducers';
 
-const catalogs = { 'en-US': catalogZhCn };
+const initialState = {
+  locale: {
+    language: "zh-CN",
+  },
+};
+const store = createStore(reducer, initialState);
 
 function App() {
-  const content = {
-    name: 'Wilson',
-    date: Date.now(),
-    value: 5,
-  };
-
   return (
-    <I18nProvider language="zh-CN" catalogs={catalogs}>
-      <div className="App">
-        <header className="App-header">
-          <List content={content} />
-        </header>
-      </div>
-    </I18nProvider>  
+    <Provider store={store}>
+      <I18nLoader>
+        <Main />
+      </I18nLoader> 
+    </Provider>
   );
 }
 
