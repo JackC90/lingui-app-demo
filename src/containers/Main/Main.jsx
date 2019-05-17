@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import List from "../../components/List/List";
 
 export class Main extends Component {
@@ -11,6 +12,7 @@ export class Main extends Component {
 
     return (
       <div className="App">
+        <LanguageSwitcher />
         <header className="App-header">
           <List content={content} />
         </header>
